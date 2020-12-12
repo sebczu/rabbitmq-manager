@@ -1,0 +1,18 @@
+{
+  "rabbit_version":"3.8.9",
+  "rabbitmq_version":"3.8.9",
+  "product_name":"RabbitMQ",
+  "product_version":"3.8.9",
+  "exchanges":[
+    {
+      "name":"test",
+      "vhost":"/",
+      "type":"fanout",
+      "durable":false,
+      "auto_delete":true,
+      "internal":false,
+      "arguments":{
+      }
+    }
+  ]
+}
