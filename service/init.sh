@@ -1,6 +1,9 @@
 #!/bin/bash
 echo "start"
 
+# Exit immediately if any command exits with a non-zero status
+set -e
+
 maxAttempts=20
 
 for (( i=1 ; i<=maxAttempts ; i++ ));
@@ -19,7 +22,6 @@ do
 
   sleep 2
 done
-
 
 rabbitmqadmin --host=$RABBITMQ_HOSTNAME --port=$RABBITMQ_PORT --username=$RABBITMQ_USERNAME --password=$RABBITMQ_PASSWORD import /rabbitmq_config/queue_test.json
 rabbitmqadmin --host=$RABBITMQ_HOSTNAME --port=$RABBITMQ_PORT --username=$RABBITMQ_USERNAME --password=$RABBITMQ_PASSWORD import /rabbitmq_config/queue_test2.json
