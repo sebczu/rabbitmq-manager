@@ -7,10 +7,10 @@ for (( i=1 ; i<=maxAttempts ; i++ ));
 do
   rabbitmqadmin --host=$RABBITMQ_HOSTNAME --port=$RABBITMQ_PORT --username=$RABBITMQ_USERNAME --password=$RABBITMQ_PASSWORD show overview
   if [ $? -eq 0 ]; then
-      echo "connect to rabbitmq [$i/10]"
+      echo "connect to rabbitmq [$i/$maxAttempts]"
       break
   else
-      echo "cannot connect to rabbitmq [$i/10]"
+      echo "cannot connect to rabbitmq [$i/$maxAttempts]"
   fi
 
   if [ $i -eq $maxAttempts ]; then
