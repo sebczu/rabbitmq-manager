@@ -1,6 +1,11 @@
 #!/bin/bash
 echo "start"
 
+echo "RABBITMQ_HOSTNAME:$RABBITMQ_HOSTNAME"
+echo "RABBITMQ_PORT:$RABBITMQ_PORT"
+echo "RABBITMQ_USERNAME:$RABBITMQ_USERNAME"
+echo "RABBITMQ_PASSWORD:$RABBITMQ_PASSWORD"
+
 maxAttempts=20
 
 for (( i=1 ; i<=maxAttempts ; i++ ));
